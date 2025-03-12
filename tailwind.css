@@ -26,4 +26,26 @@
   .tw-text-desktop-size {
     @apply tw-text-[40px] tw-leading-8;
   }
+
+  .custom-scrollbar {
+    &::-webkit-scrollbar {
+      @apply tw-h-2;
+    }
+
+    &::-webkit-scrollbar-button {
+      @apply tw-hidden;
+    }
+
+    &::-webkit-scrollbar-track {
+      @apply lg:tw-m-24 xl:tw-mx-[234px] 2xl:tw-mx-[112px] 3xl:tw-mx-[14.75rem] 4xl:tw-mx-[20rem] tw-bg-[#ddd6d7] tw-border-y-2 tw-border-x-0 tw-border-solid tw-border-white tw-rounded-lg;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      @apply tw-rounded-lg tw-bg-[#231F20] tw-border-y-2 tw-border-x-0 tw-border-solid tw-border-white;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      @apply tw-border-y-0;
+    }
+  }
 }

@@ -129,16 +129,14 @@ function productHTMLModel(product) {
             <span class="product-tag tw-left-1 md:tw-left-2 tw-text-black tw-bg-[#FFFFFA]">
                 Best Seller
             </span>
-            <img class="product-image" src="${
-              product.image
-            }" alt="">
+            <img class="product-image" src="${product.image}" alt="">
             <img class="product-image tw-absolute tw-top-0 tw-opacity-0 group-hover:tw-opacity-100 tw-z-[9]" src="${
               product.secondImage
             }" alt="">
             ${checkForDiscount(product.price, product.compareAtPrice)}
         </div>
         <div class="tw-flex tw-px-2 tw-flex-col tw-gap-2 lg:tw-w-[355px] lg:tw-px-3">
-            <p class="tw-text-base md:tw-text-lg">${product.name}</p>
+            <p class="tw-text-base md:tw-text-lg tw-line-clamp-1 tw-text-ellipsis lg:tw-line-clamp-none">${product.name}</p>
             <div class="tw-flex tw-flex-col tw-items-start tw-gap-1 md:tw-gap-[5px] xxs:tw-items-center xxs:tw-flex-row">
             <span class="tw-flex">${instantiateStar(product.rating)}</span>
             <p class="tw-font-best-seller-price tw-font-normal tw-text-[#707070] tw-text-[11px] md:tw-text-sm">
@@ -153,20 +151,33 @@ function productHTMLModel(product) {
     `;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+function buildMobileProducts() {
   const previewProducts = document.getElementById("preview-products");
-  
+
   const previewProductsArr = productsObj.products.slice(0, 4);
-  
+
   previewProductsArr.forEach((product) => {
     previewProducts.innerHTML += productHTMLModel(product);
   });
-  
+
   const hiddenProducts = document.getElementById("remaining-products");
-  
+
   const hiddenProductsArr = productsObj.products.slice(4);
-  
+
   hiddenProductsArr.forEach((product) => {
     hiddenProducts.innerHTML += productHTMLModel(product);
   });
+}
+
+function buildDesktopProducts() {
+  const desktopProducts = document.getElementById("desktop-products");
+
+  productsObj.products.forEach((product) => {
+    desktopProducts.innerHTML += productHTMLModel(product);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  buildMobileProducts();
+  buildDesktopProducts();
 });
