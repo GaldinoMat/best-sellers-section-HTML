@@ -2,8 +2,8 @@ const productsObj = {
   products: [
     {
       name: "Classic Leather Jacket",
-      image: "https://example.com/images/leather-jacket.jpg",
-      secondImage: "https://example.com/images/leather-jacket-2.jpg",
+      image: "/leather_jacket_1.jpg",
+      secondImage: "/leather_jacket_2.jpg",
       price: 199.99,
       compareAtPrice: 249.99,
       numberOfReviews: 45,
@@ -11,8 +11,8 @@ const productsObj = {
     },
     {
       name: "Wireless Noise-Cancelling Headphones",
-      image: "https://example.com/images/headphones.jpg",
-      secondImage: "https://example.com/images/headphones-2.jpg",
+      image: "/headphones_1.jpg",
+      secondImage: "/headphones_2.jpg",
       price: 149.99,
       compareAtPrice: 199.99,
       numberOfReviews: 120,
@@ -20,8 +20,8 @@ const productsObj = {
     },
     {
       name: "Organic Cotton T-Shirt",
-      image: "https://example.com/images/tshirt.jpg",
-      secondImage: "https://example.com/images/tshirt-2.jpg",
+      image: "/t-shirt_1.jpg",
+      secondImage: "/t-shirt_2.jpg",
       price: 29.99,
       compareAtPrice: 39.99,
       numberOfReviews: 87,
@@ -29,8 +29,8 @@ const productsObj = {
     },
     {
       name: "Stainless Steel Water Bottle",
-      image: "https://example.com/images/water-bottle.jpg",
-      secondImage: "https://example.com/images/water-bottle-2.jpg",
+      image: "/water_1.jpg",
+      secondImage: "/water_2.jpg",
       price: 24.99,
       compareAtPrice: 34.99,
       numberOfReviews: 56,
@@ -38,8 +38,8 @@ const productsObj = {
     },
     {
       name: "Smart Home Security Camera",
-      image: "https://example.com/images/security-camera.jpg",
-      secondImage: "https://example.com/images/security-camera-2.jpg",
+      image: "/camera_1.jpg",
+      secondImage: "/camera_2.jpg",
       price: 89.99,
       compareAtPrice: 129.99,
       numberOfReviews: 200,
@@ -47,8 +47,8 @@ const productsObj = {
     },
     {
       name: "Premium Yoga Mat",
-      image: "https://example.com/images/yoga-mat.jpg",
-      secondImage: "https://example.com/images/yoga-mat-2.jpg",
+      image: "/mat_1.jpg",
+      secondImage: "/mat_2.jpg",
       price: 49.99,
       compareAtPrice: 69.99,
       numberOfReviews: 34,
@@ -56,8 +56,8 @@ const productsObj = {
     },
     {
       name: "Bluetooth Portable Speaker",
-      image: "https://example.com/images/speaker.jpg",
-      secondImage: "https://example.com/images/speaker-2.jpg",
+      image: "/speaker_1.jpg",
+      secondImage: "/speaker_2.jpg",
       price: 59.99,
       compareAtPrice: 79.99,
       numberOfReviews: 92,
@@ -65,8 +65,8 @@ const productsObj = {
     },
     {
       name: "Electric Coffee Grinder",
-      image: "https://example.com/images/coffee-grinder.jpg",
-      secondImage: "https://example.com/images/coffee-grinder-2.jpg",
+      image: "/coffee_1.jpg",
+      secondImage: "/coffee_2.jpg",
       price: 39.99,
       compareAtPrice: 49.99,
       numberOfReviews: 78,
@@ -74,8 +74,8 @@ const productsObj = {
     },
     {
       name: "LED Desk Lamp",
-      image: "https://example.com/images/desk-lamp.jpg",
-      secondImage: "https://example.com/images/desk-lamp-2.jpg",
+      image: "/lamp_1.jpg",
+      secondImage: "/lamp_2.jpg",
       price: 34.99,
       compareAtPrice: 44.99,
       numberOfReviews: 65,
@@ -83,8 +83,8 @@ const productsObj = {
     },
     {
       name: "Wireless Charging Pad",
-      image: "https://example.com/images/wireless-charger.jpg",
-      secondImage: "https://example.com/images/wireless-charger-2.jpg",
+      image: "/pad_1.jpg",
+      secondImage: "/pad_2.jpg",
       price: 19.99,
       compareAtPrice: 29.99,
       numberOfReviews: 43,
@@ -126,7 +126,7 @@ function productHTMLModel(product) {
   return `
     <a class="tw-font-best-seller lg:tw-w-[355px] swiper-slide">
         <div class="tw-relative tw-mb-3 lg:tw-mb-4 tw-group">
-            <span class="product-tag tw-left-1 md:tw-left-2 tw-text-black">
+            <span class="product-tag tw-left-1 md:tw-left-2 tw-text-black tw-bg-[#FFFFFA]">
                 Best Seller
             </span>
             <img class="product-image" src="${
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   const hiddenProducts = document.getElementById("remaining-products");
   
-  const hiddenProductsArr = productsObj.products.slice(5);
+  const hiddenProductsArr = productsObj.products.slice(4);
   
   hiddenProductsArr.forEach((product) => {
     hiddenProducts.innerHTML += productHTMLModel(product);

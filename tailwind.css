@@ -12,6 +12,18 @@
   }
 
   .product-image {
-    @apply tw-h-[160px] xxs:tw-h-[192px] xs:tw-h-[268px] md:tw-h-[396px] xl:tw-h-[356px] 2xl:tw-h-[384px] tw-object-fill tw-rounded-xl tw-transition-all tw-duration-300;
+    @apply tw-h-[160px] xxs:tw-h-[208px] xs:tw-h-[268px] md:tw-h-[396px] xl:tw-h-[356px] 2xl:tw-h-[384px] tw-object-cover tw-rounded-xl tw-transition-all tw-duration-300 tw-w-full;
+  }
+}
+
+@layer utilities {
+  .tw-text-mobile-size {
+    @apply tw-text-[28px] tw-leading-6;
+  }
+  .tw-text-tablet-size {
+    @apply tw-text-[32px] tw-leading-6;
+  }
+  .tw-text-desktop-size {
+    @apply tw-text-[40px] tw-leading-8;
   }
 }
