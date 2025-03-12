@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .product-tag {
+    @apply tw-z-[11] tw-absolute tw-border tw-border-solid tw-border-black tw-rounded-full tw-py-1 tw-px-2 tw-text-[8px] tw-leading-[100%] md:tw-text-[10px] tw-font-normal tw-top-1 md:tw-top-2;
+  }
+
+  .product-image {
+    @apply tw-h-[160px] xxs:tw-h-[192px] xs:tw-h-[268px] md:tw-h-[396px] xl:tw-h-[356px] 2xl:tw-h-[384px] tw-object-fill tw-rounded-xl tw-transition-all tw-duration-300;
+  }
+}
