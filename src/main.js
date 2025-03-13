@@ -2,8 +2,8 @@ const productsObj = {
   products: [
     {
       name: "Classic Leather Jacket",
-      image: "/leather_jacket_1.jpg",
-      secondImage: "/leather_jacket_2.jpg",
+      image: "../src/images/leather_jacket_1.jpg",
+      secondImage: "../src/images/leather_jacket_2.jpg",
       price: 199.99,
       compareAtPrice: 249.99,
       numberOfReviews: 45,
@@ -11,8 +11,8 @@ const productsObj = {
     },
     {
       name: "Wireless Noise-Cancelling Headphones",
-      image: "/headphones_1.jpg",
-      secondImage: "/headphones_2.jpg",
+      image: "../src/images/headphones_1.jpg",
+      secondImage: "../src/images/headphones_2.jpg",
       price: 149.99,
       compareAtPrice: 199.99,
       numberOfReviews: 120,
@@ -20,8 +20,8 @@ const productsObj = {
     },
     {
       name: "Organic Cotton T-Shirt",
-      image: "/t-shirt_1.jpg",
-      secondImage: "/t-shirt_2.jpg",
+      image: "../src/images/t-shirt_1.jpg",
+      secondImage: "../src/images/t-shirt_2.jpg",
       price: 29.99,
       compareAtPrice: 39.99,
       numberOfReviews: 87,
@@ -29,8 +29,8 @@ const productsObj = {
     },
     {
       name: "Stainless Steel Water Bottle",
-      image: "/water_1.jpg",
-      secondImage: "/water_2.jpg",
+      image: "../src/images/water_1.jpg",
+      secondImage: "../src/images/water_2.jpg",
       price: 24.99,
       compareAtPrice: 34.99,
       numberOfReviews: 56,
@@ -38,8 +38,8 @@ const productsObj = {
     },
     {
       name: "Smart Home Security Camera",
-      image: "/camera_1.jpg",
-      secondImage: "/camera_2.jpg",
+      image: "../src/images/camera_1.jpg",
+      secondImage: "../src/images/camera_2.jpg",
       price: 89.99,
       compareAtPrice: 129.99,
       numberOfReviews: 200,
@@ -47,8 +47,8 @@ const productsObj = {
     },
     {
       name: "Premium Yoga Mat",
-      image: "/mat_1.jpg",
-      secondImage: "/mat_2.jpg",
+      image: "../src/images/mat_1.jpg",
+      secondImage: "../src/images/mat_2.jpg",
       price: 49.99,
       compareAtPrice: 69.99,
       numberOfReviews: 34,
@@ -56,8 +56,8 @@ const productsObj = {
     },
     {
       name: "Bluetooth Portable Speaker",
-      image: "/speaker_1.jpg",
-      secondImage: "/speaker_2.jpg",
+      image: "../src/images/speaker_1.jpg",
+      secondImage: "../src/images/speaker_2.jpg",
       price: 59.99,
       compareAtPrice: 79.99,
       numberOfReviews: 92,
@@ -65,8 +65,8 @@ const productsObj = {
     },
     {
       name: "Electric Coffee Grinder",
-      image: "/coffee_1.jpg",
-      secondImage: "/coffee_2.jpg",
+      image: "../src/images/coffee_1.jpg",
+      secondImage: "../src/images/coffee_2.jpg",
       price: 39.99,
       compareAtPrice: 49.99,
       numberOfReviews: 78,
@@ -74,8 +74,8 @@ const productsObj = {
     },
     {
       name: "LED Desk Lamp",
-      image: "/lamp_1.jpg",
-      secondImage: "/lamp_2.jpg",
+      image: "../src/images/lamp_1.jpg",
+      secondImage: "../src/images/lamp_2.jpg",
       price: 34.99,
       compareAtPrice: 44.99,
       numberOfReviews: 65,
@@ -83,8 +83,8 @@ const productsObj = {
     },
     {
       name: "Wireless Charging Pad",
-      image: "/pad_1.jpg",
-      secondImage: "/pad_2.jpg",
+      image: "../src/images/pad_1.jpg",
+      secondImage: "../src/images/pad_2.jpg",
       price: 19.99,
       compareAtPrice: 29.99,
       numberOfReviews: 43,
@@ -129,8 +129,8 @@ function productHTMLModel(product) {
             <span class="product-tag tw-left-1 md:tw-left-2 tw-text-black tw-bg-[#FFFFFA]">
                 Best Seller
             </span>
-            <img class="product-image" loading="lazy" src="${product.image}" alt="">
-            <img class="product-image tw-absolute tw-top-0 tw-opacity-0 group-hover:tw-opacity-100 tw-z-[9]" loading="lazy" src="${
+            <img class="product-image tw-cursor-pointer" src="${product.image}" alt="">
+            <img class="product-image tw-absolute tw-top-0 tw-opacity-0 group-hover:tw-opacity-100 tw-z-[9] tw-cursor-pointer" src="${
               product.secondImage
             }" alt="">
             ${checkForDiscount(product.price, product.compareAtPrice)}
