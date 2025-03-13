@@ -511,12 +511,6 @@ video {
 .tw-mb-6{
   margin-bottom: 1.5rem;
 }
-.tw-line-clamp-2{
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
 .tw-line-clamp-1{
   overflow: hidden;
   display: -webkit-box;
@@ -528,6 +522,9 @@ video {
 }
 .tw-flex{
   display: flex;
+}
+.\!tw-grid{
+  display: grid !important;
 }
 .tw-grid{
   display: grid;
@@ -838,6 +835,9 @@ video {
     display: block;
     -webkit-box-orient: horizontal;
     -webkit-line-clamp: none;
+  }
+  .lg\:\!tw-flex{
+    display: flex !important;
   }
   .lg\:tw-flex{
     display: flex;

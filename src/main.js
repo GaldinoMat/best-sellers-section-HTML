@@ -136,7 +136,9 @@ function productHTMLModel(product) {
             ${checkForDiscount(product.price, product.compareAtPrice)}
         </div>
         <div class="tw-flex tw-px-2 tw-flex-col tw-gap-2 lg:tw-w-[355px] lg:tw-px-3">
-            <p class="tw-text-base md:tw-text-lg tw-line-clamp-1 tw-text-ellipsis lg:tw-line-clamp-none">${product.name}</p>
+            <p class="tw-text-base md:tw-text-lg tw-line-clamp-1 tw-text-ellipsis lg:tw-line-clamp-none">${
+              product.name
+            }</p>
             <div class="tw-flex tw-flex-col tw-items-start tw-gap-1 md:tw-gap-[5px] xxs:tw-items-center xxs:tw-flex-row">
             <span class="tw-flex">${instantiateStar(product.rating)}</span>
             <p class="tw-font-best-seller-price tw-font-normal tw-text-[#707070] tw-text-[11px] md:tw-text-sm">
@@ -149,6 +151,12 @@ function productHTMLModel(product) {
         </div>
     </a>
     `;
+}
+
+function hideSpinner(element, classToAdd) {
+  const spinner = document.querySelector(".lds-ring");
+  spinner.classList.add("vanished-ring");
+  element.classList.add(classToAdd);
 }
 
 function buildMobileProducts() {
@@ -167,6 +175,8 @@ function buildMobileProducts() {
   hiddenProductsArr.forEach((product) => {
     hiddenProducts.innerHTML += productHTMLModel(product);
   });
+
+  hideSpinner(previewProducts, "!tw-grid");
 }
 
 function buildDesktopProducts() {
@@ -175,6 +185,8 @@ function buildDesktopProducts() {
   productsObj.products.forEach((product) => {
     desktopProducts.innerHTML += productHTMLModel(product);
   });
+
+  hideSpinner(desktopProducts, "lg:!tw-flex");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
