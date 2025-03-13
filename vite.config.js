@@ -9,13 +9,13 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: "assets",
+    outDir: "dist",
     emptyOutDir: false,
     minify: false,
     rollupOptions: {
       input: "tailwind.css",
       output: {
-        dir: "assets",
+        dir: "dist",
         assetFileNames: "styles.css",
       },
     },
