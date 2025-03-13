@@ -9,15 +9,6 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: "dist",
-    emptyOutDir: false,
-    minify: false,
-    rollupOptions: {
-      input: "tailwind.css",
-      output: {
-        dir: "dist",
-        assetFileNames: "styles.css",
-      },
-    },
+    minify: true,
   },
 });
